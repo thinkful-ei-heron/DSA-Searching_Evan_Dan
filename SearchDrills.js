@@ -109,9 +109,24 @@ function starTrekBST() {
   console.log(starTrekkie(trekBST));
 }
 
-starTrekBST();
+// starTrekBST();
 
 
 // Question 07: Max Profit
 
+const companyShares = [128, 97, 121, 123, 98, 97, 105];
 
+//Buy 97, sell 123
+function maxProfit(companyShares) {
+  //iterate through buy prices
+  let maxPrice = Number.NEGATIVE_INFINITY;
+  for(let i=0; i<companyShares.length; i++) {
+    for(let k=i+1; k<companyShares.length; k++) {
+      let result = companyShares[k] - companyShares[i];
+      if(result > maxPrice) maxPrice = result;
+    }
+  }
+  return maxPrice;
+}
+
+console.log(maxProfit(companyShares));
