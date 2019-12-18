@@ -16,3 +16,7 @@ Input sorted list: 3, 5, 6, 8, 11, 12, 14, 15, 17, 18
 17
 
 It would take 4 recursive calls to NOT find '16'.
+
+
+## Question 04: Searching in a BST ##
+
