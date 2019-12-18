@@ -5,7 +5,6 @@ export default function BinarySearch(props) {
   let result;
   const search = (toFind, dataset, start = 0, end = dataset.length - 1) => {
     count++;
-    let result = null;
     console.log(toFind);
     let middle = Math.floor((start + end) / 2);
     console.log(dataset[middle]);
