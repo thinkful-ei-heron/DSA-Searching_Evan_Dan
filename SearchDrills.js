@@ -73,4 +73,45 @@ function main() {
   postOrder(bst);
 }
 
-main();
+// main();
+
+
+// Question 06: Find the next commanding officer
+let Queue = require('./Queue');
+
+function starTrekkie(BST) {
+  let values = [];
+  const queue = new Queue;
+  queue.enqueue(BST);
+  while (queue.first) {
+    let node = queue.dequeue();
+    values.push(node.value);
+    if (node.left) {
+      queue.enqueue(node.left);
+    }
+    if (node.right) {
+      queue.enqueue(node.right);
+    }
+  }
+  return values;
+}
+
+function starTrekBST() {
+  const trekBST = new BinarySearchTree();
+  trekBST.insert(10, 'Captain Picard');
+  trekBST.insert(6, 'Commander Riker');
+  trekBST.insert(5, 'Lt. Cmdr. Worf');
+  trekBST.insert(4, 'Lietuenant security Officer');
+  trekBST.insert(7, 'Lt. Cmdr. LaForge');
+  trekBST.insert(11, 'Commander Data');
+  trekBST.insert(13, 'Lt. Cmdr. Crusher');
+  trekBST.insert(12, 'Lieutenant Selar');
+  console.log(starTrekkie(trekBST));
+}
+
+starTrekBST();
+
+
+// Question 07: Max Profit
+
+
